@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" >
+</head>
+<body>
+    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+    <div id="socials"> 
+        <a href="http://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <br>
+          <a href="http://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <br>
+          <a href="http://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <br>
+          <a href="http://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+         <br>
+         <a href="http://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+         <br>
+         <a href="http://telegram.com" target="_blank"><i class="fa-brands fa-telegram"></i></a> 
+    </div>
+    <p id="close">&times;</p>
+    <div id="container"> 
+        <div id="secondshape" > </div>
+        <form id="forms">
+            <h1 id="pagelog">login</h1>
+        <input id="emailme" type="email" placeholder="Email"   required>
+        <br>
+        <input type="password" placeholder="Password"  id="password" required><br>
+        <br>
+        <input type="checkbox"  value="remmember me" id="check" required><p id="remmember">remmember me</p>
+        <input type="submit" id="loginbtn" value="login">
+        <h5> don't have account? <strong id="signuplink">signup</strong></h5>
+        </form>
+
+        <form id="forms2">
+            <h1 id="pagelog">signup</h1>
+        <input type="email" placeholder="Email"  id="formsme2" required>
+        <br>
+        <input type="text" placeholder="username"  id="formsme2" required>
+
+        <input type="password" placeholder="Password"  id="formsme2" required><br>
+        <br>
+        <input type="checkbox"  value="remmember me" id="check2" required><p id="remmember2">remmember me</p>
+        <input type="submit" id="signupbtn2" value="signup">
+        <h6> already have account? <strong id="loginlink2">login</strong></h6>
+        </form>
+        </div>
+    </div>
+    <style>
+        *{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#btnz{
+    position: absolute;
+    top: 0;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  background:black;
+  background-size: cover;
+  background-attachment: fixed;display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frstbtn{
+    background-color: rgb(104, 104, 129);
+    padding: 4px;
+    margin: 5px;
+    display:flex;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#frstbtn{
+    background-color: rgb(104, 104, 129);
+    padding: 4px;
+    margin: 5px;
+    display:flex;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#container{
+    width: 350px;
+    height:400px;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.021);
+   border-radius: 5px;
+   backdrop-filter: blur(2px);
+   overflow: hidden;
+}
+input{
+    font-family: verdana;
+    padding-left:5px;
+    transition: 0.3s;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    width: 250px;
+    margin: 5px;
+    height: 30px;
+    position: relative;
+    top: 150px;
+    background-color: rgba(85, 80, 80, 0.356);
+    border: none;
+    cursor: pointer;
+}
+#formsme2{
+    font-family: verdana;
+    padding-left:5px;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    width: 250px;
+    margin: 5px;
+    height: 30px;
+    position: relative;
+    top: 120px;
+    background-color: rgba(85, 80, 80, 0.356);
+    border: none;
+    cursor: pointer;
+}
+#formsme2 , #check2 , #remmember2{
+    position: relative;
+    bottom: 70px;
+}
+#signupbtn2{
+    width: 60px;
+    transition: .4s;
+    position: relative;
+    bottom: 100px;
+}
+h6{
+    position: relative;
+    top: 190px;
+    color: bisque;
+
+}
+#loginlink2:hover{
+   text-decoration: underline 1px white;
+}
+#signuplink:hover{
+   text-decoration: underline 1px white;
+}
+input:hover{
+    background: rgba(169, 169, 169, 0.349);
+    transition: 0.4s;
+    color: rgb(7, 6, 6);
+    box-shadow: 20px ,20px ,0px;
+    box-shadow: 1px 2px  5px 0px #0c0c0c
+ }
+ #formsme2:hover{
+    background: rgba(169, 169, 169, 0.349);
+    transition: 0.4s;
+    color: rgb(7, 6, 6);
+ }
+#check , #check2{
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    left: 45px;
+    top: 273px;
+    z-index: 10;
+
+}
+#forms ::placeholder{
+    color: azure;
+}
+#remmember{
+    position: relative;
+    top: 143px;
+    right: 65px;
+    color: rgb(126, 120, 120);
+    font-size: small;
+    font-weight: bold;
+}
+
+#remmember2{
+    position: relative;
+    top: 103px;
+    right: 65px;
+    color: rgb(126, 120, 120);
+    font-size: small;
+    font-weight: bold;
+}
+form{
+   display: block;
+   position: relative;
+   animation-name: hideme;
+   animation-duration: 1.5s;
+   bottom: 50px
+}
+#forms2{
+    position: relative;
+    bottom: 255px;
+    right: 400px;
+}
+
+#loginbtn{
+    border-radius: 4px;
+    width: 60px;
+    font-weight: bolder;
+    transition: .4s;
+}
+#loginbtn:hover{
+   background: rgba(169, 169, 169, 0.349);
+   transition: 0.4s;
+   color: rgb(7, 6, 6);
+}
+
+h1{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    top: 70px;
+    color: bisque;
+    transition: 4s;
+    cursor: pointer;
+}
+#pagelog{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    top: 60px;
+    z-index: -10;
+    color: bisque;
+    cursor: pointer;
+}
+
+#close{
+    color: aliceblue;
+    position: relative;
+    left: 360px;
+    bottom: 200px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 20;
+    font-size: 30px;
+}
+h5{
+    position: relative;
+    top: 230px;
+    color: bisque;
+}
+strong{
+    color: rgb(170, 170, 170);
+    cursor: pointer;
+}
+#secondshape{
+    width: 370px;
+    height: 400px;
+    z-index: -10;
+    background-color: antiquewhite;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    left: 170px;
+    transition: 3s;
+    border-radius: 5;
+    transform: rotate3d(90deg);
+    animation-name: colorful;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colorful{
+    0%{
+        box-shadow: 10px 10px  20px 1px rgb(255, 96, 4);
+        transition: 0.5s;
+    }
+    25%{
+        box-shadow: 10px 20px  120px 1px rgb(255, 96, 4); 
+    }
+    40%{
+        box-shadow: 10px 20px  170px 1px rgb(255, 96, 4);
+    }
+    60%{
+        box-shadow: 10px 20px  200px 1px rgb(255, 96, 4);
+
+    }
+    80%{
+        box-shadow: 10px 20px  220px 1px rgb(255, 96, 4);
+
+    }
+    100%{
+        box-shadow: 10px 20px  20px 1px rgb(196, 55, 0);
+        transition: 0.5s;
+
+    }
+
+  
+}
+#socials{
+    font-size: larger;
+    transition: 0.6s;
+    height: fit-content;
+    border-radius: 4px;
+    background-color: rgb(202, 202, 202);
+    background-attachment: fixed;
+    position: fixed;
+    left: -33px;
+    overflow: hidden;
+    border-right: double 2px gray;
+} 
+ .fa-arrow-right-to-bracket{
+    transition: 0.6s;
+    color: wheat;
+    position: fixed;
+    left: -7px;
+    top:195px;
+    cursor: pointer;
+ 
+  }
+i{
+    padding:7px;
+}
+.fa-facebook{
+    transition: .3s;
+    margin: 0px;
+}
+.fa-facebook:hover{
+  color: blue;
+  transition: .3s;
+  transform:scale(1.5);
+}
+.fa-instagram{
+    transition: .3s;
+}
+.fa-instagram:hover{
+    color:rgb(112, 2, 112) ;
+    transition: .3s;
+    transform:scale(1.5); 
+    border-radius: 50%;
+  }
+  .fa-linkedin{
+    transition: .3s;
+}
+.fa-linkedin:hover{
+    color:rgb(3, 103, 184) ;
+    transition: .3s;
+    transform:scale(1.5); 
+  }
+  .fa-twitter{
+    transition: .3s;
+}
+.fa-twitter:hover{
+    color:rgb(13, 133, 231) ;
+    transition: .3s;
+    transform:scale(1.5); 
+    border-radius: 50%;
+  }
+  .fa-github{
+    transition: .3s;
+}
+.fa-github:hover{
+    color:rgb(20, 25, 29) ;
+    transition: .3s;
+    transform:scale(1.5); 
+    border-radius: 50%;
+  }
+  .fa-telegram{
+    transition: .3s;
+}
+.fa-telegram:hover{
+    color:rgb(2, 135, 168) ;
+    transition: .3s;
+    transform:scale(1.5); 
+    border-radius: 50%;
+  }
+ </style>
+ <script>
+ 
+ let signuplink = document.getElementById('signuplink');
+let loginlink2 = document.getElementById('loginlink2');
+
+let pagelog = document.getElementById('pagelog');
+let secondshape = document.getElementById('secondshape');
+let forms = document.getElementById('forms');
+let forms2 = document.getElementById("forms2");
+
+signuplink.onclick = function() {
+        secondshape.style.cssText = `
+            background: wheate;
+            transition: 1.2s;
+            transform: translate(-400px, 0px) rotateY(180deg);
+        `;
+        pagelog.style.transition = "3s";
+       
+
+        forms.style.cssText=`
+          transition:.5s;
+          transform:translate(40px,0px);
+          opacity:0;
+        `;
+        forms2.style.cssText=`
+        transition:.7s;
+        transform:translate(400px,0px);
+        opacity:10;
+      `;
+     }
+     loginlink2.onclick = function(){
+        secondshape.style.cssText = `
+            background: wheate;
+            transition: 1.2s;
+            transform: translate(15px, 0px);
+        `;
+        forms.style.cssText=`
+        transition:.7s;
+        transform:translate(0px,0px);
+        opacity:10;
+      `;
+      forms2.style.cssText=`
+      transition:.5s;
+      transform:translate(-40px,0px);
+      opacity:0;
+    `;
+    };
+    
+    let arrows = document.querySelector('.fa-arrow-right-to-bracket');
+    let socials = document.getElementById("socials");
+    overme=false;
+    arrows.onclick=function(){
+     if(!overme){
+       arrows.style.cssText=` 
+       transition:0.6s;
+       transform:translate(32px);
+       `
+       socials.style.cssText=`
+       transition:0.7s;
+       transform:translate(32px);
+       `
+    }
+    else{
+      arrows.style.cssText=` 
+      transform:translate(-2px) ;
+      `;
+      socials.style.cssText=`
+       transition:0.4s;
+       transform:translate(0px);
+       `
+  
+    }
+    overme=!overme;
+  };
+
+  let btnlog = document.querySelector('.frstbtn');
+  let btnsign = document.getElementById('#frstbtn');
+    let container = document.getElementById('container')
+    let closeme = document.getElementById('close');
+    closeme.onclick=function(){
+        container.style.cssText=`
+        transform: translate(0px, -190px);
+         transition:1.2s;
+        opacity:0;
+        `;
+        closeme.style.opacity='0';
+        closeme.style.transition='1.2s';
+
+        buttons.display="flex";
+    };
+      
+    let emailme =document.getElementById("emailme");
+
+window.onload=function(){
+     emailme.focus();
+}
+
+ </script>
+    
+</body>
+</html>
+
